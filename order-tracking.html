@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order - Flamingo-Drop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦩</span>
+                <span>Flamingo-Drop</span>
+            </a>
+            <div class="location-indicator">
+                <span>📍</span>
+                <span>123 Main St, City</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                <li><a href="cart.html" class="nav-link">
+                    <span class="cart-icon">🛒<span class="cart-badge">0</span></span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="tracking-container">
+        <!-- Tracking Header -->
+        <div class="tracking-header">
+            <p class="order-id">Order #ORD-12345</p>
+            <h1 class="tracking-status">Preparing your order</h1>
+            <p class="estimated-time">Estimated delivery: 6:30 PM</p>
+        </div>
+
+        <!-- Status Steps -->
+        <div class="status-steps">
+            <div class="status-step completed">
+                <div class="status-icon">✓</div>
+                <div class="status-content">
+                    <h3 class="status-title">Order Placed</h3>
+                    <p class="status-description">Your order has been confirmed at 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="status-step active">
+                <div class="status-icon">👨‍🍳</div>
+                <div class="status-content">
+                    <h3 class="status-title">Preparing</h3>
+                    <p class="status-description">Burger Paradise is preparing your order</p>
+                </div>
+            </div>
+
+            <div class="status-step">
+                <div class="status-icon">📦</div>
+                <div class="status-content">
+                    <h3 class="status-title">Picked Up</h3>
+                    <p class="status-description">Driver has picked up your order</p>
+                </div>
+            </div>
+
+            <div class="status-step">
+                <div class="status-icon">🚗</div>
+                <div class="status-content">
+                    <h3 class="status-title">On The Way</h3>
+                    <p class="status-description">Your order is on the way to you</p>
+                </div>
+            </div>
+
+            <div class="status-step">
+                <div class="status-icon">🏠</div>
+                <div class="status-content">
+                    <h3 class="status-title">Delivered</h3>
+                    <p class="status-description">Your order has been delivered</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder">
+            <div style="text-align: center; color: var(--text-light);">
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">📍 Live Map View</p>
+                <p style="font-size: 0.9rem;">Track your delivery in real-time</p>
+            </div>
+        </div>
+
+        <!-- Driver Info -->
+        <div class="driver-info">
+            <div class="driver-header">
+                <div class="driver-avatar">JS</div>
+                <div>
+                    <h3 class="driver-name">John Smith</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Your delivery driver</p>
+                </div>
+            </div>
+            <div class="driver-details">
+                <div class="driver-detail-item">
+                    <span class="driver-detail-label">Phone</span>
+                    <span class="driver-detail-value">+1 (555) 123-4567</span>
+                </div>
+                <div class="driver-detail-item">
+                    <span class="driver-detail-label">Vehicle</span>
+                    <span class="driver-detail-value">Honda Civic</span>
+                </div>
+                <div class="driver-detail-item">
+                    <span class="driver-detail-label">License Plate</span>
+                    <span class="driver-detail-value">ABC-1234</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Details -->
+        <div class="driver-info" style="margin-top: 2rem;">
+            <h3 style="margin-bottom: 1.5rem; color: var(--charcoal);">Order Details</h3>
+            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray);">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Burger Paradise</p>
+                <div style="font-size: 0.9rem; color: var(--text-light);">
+                    <p>2x Classic Cheeseburger - $17.98</p>
+                    <p>1x French Fries - $3.99</p>
+                    <p>1x Coca Cola - $2.49</p>
+                </div>
+            </div>
+            <div class="driver-details">
+                <div class="driver-detail-item">
+                    <span class="driver-detail-label">Subtotal</span>
+                    <span class="driver-detail-value">$24.46</span>
+                </div>
+                <div class="driver-detail-item">
+                    <span class="driver-detail-label">Taxes & Fees</span>
+                    <span class="driver-detail-value">$1.96</span>
+                </div>
+                <div class="driver-detail-item">
+                    <span class="driver-detail-label">Delivery Fee</span>
+                    <span class="driver-detail-value">$2.99</span>
+                </div>
+                <div class="driver-detail-item" style="border-top: 2px solid var(--light-gray); padding-top: 1rem; margin-top: 0.5rem;">
+                    <span class="driver-detail-label" style="font-size: 1.1rem; font-weight: 700; color: var(--charcoal);">Total</span>
+                    <span class="driver-detail-value" style="font-size: 1.1rem; font-weight: 700; color: var(--flamingo-pink);">$29.41</span>
+                </div>
+            </div>
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--light-gray);">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Delivery Address</p>
+                <p style="color: var(--text-light); font-size: 0.9rem;">123 Main Street, Apt 4B<br>City, State 12345</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Flamingo-Drop</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Delivery Areas</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flamingo-Drop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
