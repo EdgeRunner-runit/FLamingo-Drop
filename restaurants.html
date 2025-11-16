@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - Flamingo-Drop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦩</span>
+                <span>Flamingo-Drop</span>
+            </a>
+            <div class="location-indicator">
+                <span>📍</span>
+                <span>123 Main St, City</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                <li><a href="cart.html" class="nav-link">
+                    <span class="cart-icon">🛒<span class="cart-badge">3</span></span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container restaurants-layout" style="margin-top: 2rem;">
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+            <h3 class="filter-section-title">Filters</h3>
+            
+            <div style="margin-bottom: 2rem;">
+                <h4 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--charcoal);">Rating</h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="rating-4" checked>
+                    <label for="rating-4" class="filter-checkbox"></label>
+                    <label for="rating-4" style="cursor: pointer;">4+ ⭐</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="rating-4.5">
+                    <label for="rating-4.5" class="filter-checkbox"></label>
+                    <label for="rating-4.5" style="cursor: pointer;">4.5+ ⭐</label>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h4 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--charcoal);">Price Range</h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="price-low" checked>
+                    <label for="price-low" class="filter-checkbox"></label>
+                    <label for="price-low" style="cursor: pointer;">$ (Budget)</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="price-mid">
+                    <label for="price-mid" class="filter-checkbox"></label>
+                    <label for="price-mid" style="cursor: pointer;">$$ (Moderate)</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="price-high">
+                    <label for="price-high" class="filter-checkbox"></label>
+                    <label for="price-high" style="cursor: pointer;">$$$ (Premium)</label>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--charcoal);">Cuisine</h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="cuisine-fastfood">
+                    <label for="cuisine-fastfood" class="filter-checkbox"></label>
+                    <label for="cuisine-fastfood" style="cursor: pointer;">Fast Food</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cuisine-pizza">
+                    <label for="cuisine-pizza" class="filter-checkbox"></label>
+                    <label for="cuisine-pizza" style="cursor: pointer;">Pizza</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cuisine-healthy">
+                    <label for="cuisine-healthy" class="filter-checkbox"></label>
+                    <label for="cuisine-healthy" style="cursor: pointer;">Healthy</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cuisine-asian">
+                    <label for="cuisine-asian" class="filter-checkbox"></label>
+                    <label for="cuisine-asian" style="cursor: pointer;">Asian</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cuisine-mexican">
+                    <label for="cuisine-mexican" class="filter-checkbox"></label>
+                    <label for="cuisine-mexican" style="cursor: pointer;">Mexican</label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Restaurant Listing -->
+        <main>
+            <!-- Filters & Sort Section -->
+            <div class="filters-section">
+                <div class="filters-header">
+                    <h2 style="margin: 0; font-size: 1.5rem;">All Restaurants</h2>
+                    <div class="sort-wrapper">
+                        <select class="sort-select">
+                            <option>Sort by: Recommended</option>
+                            <option>Sort by: Rating</option>
+                            <option>Sort by: Delivery Time</option>
+                            <option>Sort by: Price: Low to High</option>
+                            <option>Sort by: Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Fast Delivery</button>
+                    <button class="filter-btn">New</button>
+                    <button class="filter-btn">Top Rated</button>
+                    <button class="filter-btn">Offers</button>
+                </div>
+            </div>
+
+            <!-- Restaurant Grid -->
+            <div class="restaurant-grid" style="margin-top: 2rem;">
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400" alt="Burger Paradise" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Burger Paradise</h3>
+                        <p class="restaurant-cuisine">Fast Food</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.8</div>
+                            <div class="delivery-info">
+                                <span>25-35 min</span>
+                                <span>•</span>
+                                <span>$2.99 delivery</span>
+                            </div>
+                        </div>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza Express" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Pizza Express</h3>
+                        <p class="restaurant-cuisine">Pizza</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.6</div>
+                            <div class="delivery-info">
+                                <span>30-40 min</span>
+                                <span>•</span>
+                                <span>$3.49 delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400" alt="Green Leaf Salads" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Green Leaf Salads</h3>
+                        <p class="restaurant-cuisine">Healthy</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.7</div>
+                            <div class="delivery-info">
+                                <span>20-30 min</span>
+                                <span>•</span>
+                                <span>$2.49 delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400" alt="Sweet Dreams Bakery" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Sweet Dreams Bakery</h3>
+                        <p class="restaurant-cuisine">Desserts</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.9</div>
+                            <div class="delivery-info">
+                                <span>15-25 min</span>
+                                <span>•</span>
+                                <span>$1.99 delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400" alt="Dragon Wok" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Dragon Wok</h3>
+                        <p class="restaurant-cuisine">Asian</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.5</div>
+                            <div class="delivery-info">
+                                <span>35-45 min</span>
+                                <span>•</span>
+                                <span>$3.99 delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38174c3c0a5a?w=400" alt="Taco Fiesta" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Taco Fiesta</h3>
+                        <p class="restaurant-cuisine">Mexican</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.6</div>
+                            <div class="delivery-info">
+                                <span>25-35 min</span>
+                                <span>•</span>
+                                <span>$2.99 delivery</span>
+                            </div>
+                        </div>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400" alt="Pasta Corner" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Pasta Corner</h3>
+                        <p class="restaurant-cuisine">Italian</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.7</div>
+                            <div class="delivery-info">
+                                <span>30-40 min</span>
+                                <span>•</span>
+                                <span>$3.49 delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="restaurant-details.html" class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400" alt="Smoothie Bar" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Smoothie Bar</h3>
+                        <p class="restaurant-cuisine">Beverages</p>
+                        <div class="restaurant-details">
+                            <div class="rating">⭐ 4.4</div>
+                            <div class="delivery-info">
+                                <span>15-20 min</span>
+                                <span>•</span>
+                                <span>$1.99 delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Flamingo-Drop</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Delivery Areas</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flamingo-Drop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
