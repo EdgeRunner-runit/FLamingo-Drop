@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco Fiesta - Flamingo-Drop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦩</span>
+                <span>Flamingo-Drop</span>
+            </a>
+            <div class="location-indicator">
+                <span>📍</span>
+                <span>123 Main Street, City</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                <li><a href="cart.html" class="nav-link">
+                    <span class="cart-icon">🛒<span class="cart-badge">3</span></span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Restaurant Banner -->
+    <section class="restaurant-banner">
+        <div class="banner-content">
+            <div class="restaurant-header">
+                <div class="restaurant-title-section">
+                    <h1>Taco Fiesta</h1>
+                    <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1rem;">Mexican • Tex-Mex</p>
+                    <div class="restaurant-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⭐</span>
+                            <span>4.6 (1,023 reviews)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">⏱️</span>
+                            <span>25-35 min</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">💰</span>
+                            <span>₹29.99 delivery fee</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📦</span>
+                            <span>Min. order ₹150</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Recommended Combos Section -->
+        <section class="section">
+            <h2 class="section-title">🌮 Recommended Combos</h2>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38174c3c0a5a?w=400" alt="Taco Combo" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Fiesta Combo</h3>
+                        <p class="restaurant-cuisine">3 Tacos + Rice + Beans + Drink</p>
+                        <div class="restaurant-details">
+                            <div style="font-weight: 700; color: var(--flamingo-pink);">₹349.99</div>
+                            <div class="delivery-info">
+                                <span>Save ₹59.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38174c3c0a5a?w=400" alt="Taco Combo" class="restaurant-image">
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Burrito Combo</h3>
+                        <p class="restaurant-cuisine">Large Burrito + Chips & Salsa + Drink</p>
+                        <div class="restaurant-details">
+                            <div style="font-weight: 700; color: var(--flamingo-pink);">₹299.99</div>
+                            <div class="delivery-info">
+                                <span>Save ₹49.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+-
+        <!-- Menu Sections -->
+        <section class="menu-section">
+            <h2 class="menu-section-title">🌮 Tacos</h2>
+            <div class="menu-items">
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38174c3c0a5a?w=300" alt="Veggie Taco" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Veggie Taco</h3>
+                        <p class="food-item-description">Black beans, corn, lettuce, tomatoes, and avocado in soft shell</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹89.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38174c3c0a5a?w=300" alt="Bean Taco" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Bean & Cheese Taco</h3>
+                        <p class="food-item-description">Refried beans, cheese, lettuce, and salsa</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹79.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38174c3c0a5a?w=300" alt="Crispy Taco" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Crispy Taco</h3>
+                        <p class="food-item-description">Crispy shell filled with beans, lettuce, cheese, and sour cream</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹84.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="menu-section-title">🌯 Burritos & Quesadillas</h2>
+            <div class="menu-items">
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300" alt="Bean Burrito" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Bean Burrito</h3>
+                        <p class="food-item-description">Large flour tortilla with beans, rice, cheese, and salsa</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹179.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300" alt="Veggie Burrito" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Veggie Burrito</h3>
+                        <p class="food-item-description">Rice, beans, vegetables, cheese, and guacamole</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹199.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=300" alt="Quesadilla" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Cheese Quesadilla</h3>
+                        <p class="food-item-description">Grilled flour tortilla with melted cheese and vegetables</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹149.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="menu-section-title">🍟 Sides & Extras</h2>
+            <div class="menu-items">
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=300" alt="Nachos" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Nachos Supreme</h3>
+                        <p class="food-item-description">Tortilla chips with beans, cheese, jalapeños, and salsa</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹159.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=300" alt="Rice & Beans" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Rice & Beans</h3>
+                        <p class="food-item-description">Mexican rice and refried beans</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹99.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-item-card">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=300" alt="Guacamole" class="food-item-image">
+                    <div class="food-item-info">
+                        <h3 class="food-item-name">Fresh Guacamole</h3>
+                        <p class="food-item-description">Homemade guacamole with chips</p>
+                        <div class="food-item-footer">
+                            <span class="food-item-price">₹119.99</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Flamingo-Drop</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Delivery Areas</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Flamingo-Drop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
