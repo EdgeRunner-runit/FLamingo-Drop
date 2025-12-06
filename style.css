@@ -305,11 +305,23 @@ p {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .restaurant-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
+}
+
+.restaurant-card:not(a) {
+  cursor: default;
+}
+
+.restaurant-card:not(a):hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
 }
 
 .restaurant-image {
@@ -381,11 +393,13 @@ p {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   cursor: pointer;
+  border: 2px solid transparent;
 }
 
 .food-item-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateX(5px);
+  border-color: var(--flamingo-pink);
 }
 
 .food-item-image {
@@ -395,10 +409,18 @@ p {
   border-radius: 8px;
   background: linear-gradient(135deg, var(--flamingo-pink), #ff8cc8);
   flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.food-item-card:hover .food-item-image {
+  transform: scale(1.05);
 }
 
 .food-item-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .food-item-name {
@@ -406,6 +428,7 @@ p {
   font-weight: 600;
   color: var(--charcoal);
   margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
 
 .food-item-description {
@@ -413,18 +436,22 @@ p {
   color: var(--text-light);
   margin-bottom: 0.5rem;
   line-height: 1.4;
+  flex: 1;
 }
 
 .food-item-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 .food-item-price {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--flamingo-pink);
+  white-space: nowrap;
 }
 
 .add-to-cart-btn {
@@ -436,11 +463,15 @@ p {
   font-size: 0.9rem;
   transition: var(--transition);
   cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(252, 92, 156, 0.3);
 }
 
 .add-to-cart-btn:hover {
   background-color: #e04a8a;
   transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(252, 92, 156, 0.4);
 }
 
 .add-to-cart-btn:active {
@@ -450,6 +481,7 @@ p {
 /* ===== Menu Section ===== */
 .menu-section {
   margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease-out;
 }
 
 .menu-section-title {
@@ -458,6 +490,10 @@ p {
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
 }
 
 .menu-items {
@@ -466,18 +502,50 @@ p {
   gap: 1.5rem;
 }
 
+/* ===== Recommended Combos Section ===== */
+.section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
 /* ===== Restaurant Banner ===== */
 .restaurant-banner {
   background: linear-gradient(135deg, var(--flamingo-pink) 0%, #ff8cc8 100%);
   color: var(--white);
   padding: 3rem 0;
   margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .banner-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .restaurant-header {
@@ -488,9 +556,22 @@ p {
   flex-wrap: wrap;
 }
 
+.restaurant-title-section {
+  flex: 1;
+  min-width: 300px;
+}
+
 .restaurant-title-section h1 {
   color: var(--white);
   margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.restaurant-title-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .restaurant-meta {
@@ -504,10 +585,13 @@ p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .meta-icon {
   font-size: 1.25rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 /* ===== Filters & Sorting ===== */
